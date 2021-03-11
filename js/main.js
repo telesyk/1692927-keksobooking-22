@@ -1,8 +1,5 @@
 /* Main.js */
-import { randomInteger, randomFloat } from './module-2.js';
+import { generateAdverts } from './module-3.js';
 
-/* 
-* For test module 2
-*/
-alert(randomInteger(25, 30));
-alert(randomFloat(0, 0.5, 3));
+const adverts = generateAdverts();
+// console.debug(adverts);
