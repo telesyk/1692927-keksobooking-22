@@ -1,4 +1,4 @@
-/* Main.js */
-import { generateAdverts } from './module-3.js';
+import modules from './modules/index.js';
 
-generateAdverts();
+// /* debug */console.debug( modules.adverts.createAdverts() );
+modules.adverts.createAdverts();
