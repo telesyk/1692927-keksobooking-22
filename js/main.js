@@ -1,4 +1,10 @@
 import modules from './modules/index.js';
 
-// /* debug */console.debug( modules.adverts.createAdverts() );
-modules.adverts.createAdverts();
+const {adverts, card} = modules;
+
+const advertsData = adverts()[0];
+// /* debug */console.debug( advertsData );
+// advertsData;
+
+const canvasBlock = document.querySelector('#map-canvas');
+canvasBlock.appendChild( card(advertsData) );

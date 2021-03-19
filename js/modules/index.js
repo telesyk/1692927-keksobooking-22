@@ -1,9 +1,6 @@
 // import adverts from './adverts.js';
-import adverts from './adverts/index.js';
-
-function testModules() {
-  return 'index modules';
-}
+import { adverts } from './adverts/index.js';
+import card from './card.js';
 
 
-export default { testModules, adverts };
+export default { card, adverts };

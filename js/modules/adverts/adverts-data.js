@@ -1,5 +1,3 @@
-import createSingleAdvert from './create-single-advert.js';
-
 const TITLES = [
   'Two-Bedroom Apartment With Terrace',
   'Perfectly Located 1 Br Apartment',
@@ -23,7 +21,7 @@ const PHOTOS = [
   'http://o0.github.io/assets/images/tokyo/hotel3.jpg',
 ];
 
-const advertData = {
+const advertsData = {
   TITLES,
   DESCRIPTIONS,
   TYPES,
@@ -32,16 +30,4 @@ const advertData = {
   PHOTOS,
 };
 
-const createAdverts = function() {
-  let adverts = [];
-
-  for (let i = 0; i < 10; i++) {
-    const advert = createSingleAdvert(advertData);
-
-    adverts.push(advert);
-  }
-
-  return adverts;
-};
-
-export default createAdverts;
+export default advertsData;

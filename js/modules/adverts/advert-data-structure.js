@@ -15,7 +15,7 @@ const createStringList = function(incomeArray) {
 };
 
 
-const createSingleAdvert = function(data) {
+const advertDataStructure = function(data) {
   const { TITLES, DESCRIPTIONS, TYPES, TIMES, FEATURES, PHOTOS } = data;
 
   const avatar = `img/avatars/user0${utils.randomInteger(1, 8)}.png`;
@@ -57,4 +57,4 @@ const createSingleAdvert = function(data) {
   };
 };
 
-export default createSingleAdvert;
+export default advertDataStructure;
