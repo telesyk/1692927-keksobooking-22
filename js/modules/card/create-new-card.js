@@ -3,7 +3,7 @@ import setPhotos from './set-photos.js';
 import setFeatures from './set-features.js';
 
 export default function createNewCard(template, data) {
-  const { author, offer, location } = data;
+  const { author, offer } = data;
   
   const elementNewCard = template.querySelector('.popup');
   const elementAvatar = elementNewCard.querySelector('.popup__avatar');
@@ -30,4 +30,4 @@ export default function createNewCard(template, data) {
   setFeatures(elementFeatures, offer.features);
   
   return elementNewCard;
-};
+}

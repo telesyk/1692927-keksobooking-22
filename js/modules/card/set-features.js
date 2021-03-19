@@ -8,4 +8,4 @@ export default function setFeatures(block, features) {
     const isAvailable = newClassNames.includes(unicClass);
     if (!isAvailable) feature.classList.add('hidden');
   }
-};
+}

@@ -8,4 +8,4 @@ export default function setPhotos(photoBlock, offerPhotos) {
 
     photoBlock.appendChild( newPhoto );
   });
-};
+}
