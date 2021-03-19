@@ -5,4 +5,4 @@ export default function(data) {
   const clonedTemplate = template.cloneNode(true);
 
   return createNewCard(clonedTemplate, data);
-}
+};

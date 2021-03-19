@@ -1,7 +1,7 @@
 import advertDataStructure from './advert-data-structure.js';
 import advertsData from './adverts-data.js';
 
-const createAdvertsArray = function() {
+const createAdvertsData = function() {
   let adverts = [];
 
   for (let i = 0; i < 10; i++) {
@@ -13,4 +13,4 @@ const createAdvertsArray = function() {
   return adverts;
 };
 
-export { createAdvertsArray as  adverts };
+export { createAdvertsData as  adverts };

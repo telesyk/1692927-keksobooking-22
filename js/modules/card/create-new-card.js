@@ -1,7 +1,6 @@
 import setProperType from './set-proper-type.js';
 import setPhotos from './set-photos.js';
 import setFeatures from './set-features.js';
-// import utils from '../../utils/index.js';
 
 export default function createNewCard(template, data) {
   const { author, offer, location } = data;
@@ -18,7 +17,6 @@ export default function createNewCard(template, data) {
   const elementDescription = elementNewCard.querySelector('.popup__description');
   const elementPhotos = elementNewCard.querySelector('.popup__photos');
 
-  // utils.hideEmptyElement(author.avatar, elementAvatar);
   elementAvatar.src = author.avatar;
   elementTitle.textContent = offer.title;
   elementAddress.textContent = offer.address;
