@@ -12,6 +12,6 @@ export default {
     'parking',
     'washer',
     'elevator',
-    'conditioner'
+    'conditioner',
   ],
 }
