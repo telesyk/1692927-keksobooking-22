@@ -13,4 +13,4 @@ const createAdvertsData = function() {
   return adverts;
 };
 
-export { createAdvertsData as  adverts };
+export { createAdvertsData as adverts };

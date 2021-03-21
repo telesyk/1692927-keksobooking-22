@@ -1,15 +1,19 @@
+import preferencesAdvertForm from '../../constants/preferences-advert-form.js';
+
+const { TYPES } = preferencesAdvertForm;
+
 export default function setProperType(type) {
   switch(type) {
-    case 'flat':
-      type = 'Квартира';
-      break;
-    case 'bungalow':
+    case TYPES[0]:
       type = 'Бунгало';
       break;
-    case 'house':
+    case TYPES[1]:
+      type = 'Квартира';
+      break;
+    case TYPES[2]:
       type = 'Дом';
       break;
-    case 'palace':
+    case TYPES[3]:
       type = 'Дворец';
       break;
     default:
