@@ -4,7 +4,10 @@ export default function setFeatures(block, features) {
   const newClassNames = features.map(item => `${className}--${item}`);
 
   for (const feature of featuresList) {
-    const unicClass = feature.classList[1];
+    let unicClass = null;
+    for (const classListItem of feature.classList) {
+      if (classListItem !== className) unicClass = classListItem;
+    }
     const isAvailable = newClassNames.includes(unicClass);
     if (!isAvailable) feature.classList.add('hidden');
   }

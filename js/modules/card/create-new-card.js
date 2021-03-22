@@ -5,29 +5,29 @@ import setFeatures from './set-features.js';
 export default function createNewCard(template, data) {
   const { author, offer } = data;
   
-  const elementNewCard = template.querySelector('.popup');
-  const elementAvatar = elementNewCard.querySelector('.popup__avatar');
-  const elementTitle = elementNewCard.querySelector('.popup__title');
-  const elementAddress = elementNewCard.querySelector('.popup__text--address');
-  const elementPrice = elementNewCard.querySelector('.popup__text--price');
-  const elementType = elementNewCard.querySelector('.popup__type');
-  const elementCapacity = elementNewCard.querySelector('.popup__text--capacity');
-  const elementtTime = elementNewCard.querySelector('.popup__text--time');
-  const elementFeatures = elementNewCard.querySelector('.popup__features');
-  const elementDescription = elementNewCard.querySelector('.popup__description');
-  const elementPhotos = elementNewCard.querySelector('.popup__photos');
+  const newCardElement = template.querySelector('.popup');
+  const avatarElement = newCardElement.querySelector('.popup__avatar');
+  const titleElement = newCardElement.querySelector('.popup__title');
+  const addressElement = newCardElement.querySelector('.popup__text--address');
+  const priceElement = newCardElement.querySelector('.popup__text--price');
+  const typeElement = newCardElement.querySelector('.popup__type');
+  const capacityElement = newCardElement.querySelector('.popup__text--capacity');
+  const timeElement = newCardElement.querySelector('.popup__text--time');
+  const featuresElement = newCardElement.querySelector('.popup__features');
+  const descriptionElement = newCardElement.querySelector('.popup__description');
+  const photosElement = newCardElement.querySelector('.popup__photos');
 
-  elementAvatar.src = author.avatar;
-  elementTitle.textContent = offer.title;
-  elementAddress.textContent = offer.address;
-  elementPrice.innerHTML = `${offer.price} ₽/ночь`;
-  elementType.textContent = setProperType(offer.type);
-  elementCapacity.textContent = `${offer.rooms} комнаты для ${offer.guests} гостей`;
-  elementtTime.textContent = `Заезд после ${offer.checkin}, выезд до ${offer.checkout}`;
-  elementDescription.textContent = offer.description;
+  avatarElement.src = author.avatar;
+  titleElement.textContent = offer.title;
+  addressElement.textContent = offer.address;
+  priceElement.innerHTML = `${offer.price} <span>₽/ночь</span>`;
+  typeElement.textContent = setProperType(offer.type);
+  capacityElement.textContent = `${offer.rooms} комнаты для ${offer.guests} гостей`;
+  timeElement.textContent = `Заезд после ${offer.checkin}, выезд до ${offer.checkout}`;
+  descriptionElement.textContent = offer.description;
 
-  setPhotos(elementPhotos, offer.photos);
-  setFeatures(elementFeatures, offer.features);
+  setPhotos(photosElement, offer.photos);
+  setFeatures(featuresElement, offer.features);
   
-  return elementNewCard;
+  return newCardElement;
 }

@@ -1,10 +1,10 @@
 import advertDataStructure from './advert-data-structure.js';
 import advertsData from './adverts-data.js';
 
-const createAdvertsData = function() {
+const createTestAdvertsData = function() {
   let adverts = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < advertsData.ADVERTS_QUANTITY; i++) {
     const advert = advertDataStructure(advertsData);
 
     adverts.push(advert);
@@ -13,4 +13,8 @@ const createAdvertsData = function() {
   return adverts;
 };
 
-export { createAdvertsData as adverts };
+export default { 
+  advertsData,
+  advertDataStructure,
+  createTestAdvertsData,
+};

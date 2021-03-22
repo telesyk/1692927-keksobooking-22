@@ -1,11 +1,19 @@
 export default {
   TIMES: ['12:00', '13:00', '14:00'],
-  TYPES: [
-    'bungalow',
-    'flat', 
-    'house',
-    'palace',
-  ],
+  TYPES: {
+    values: [
+      'bungalow',
+      'flat', 
+      'house',
+      'palace',
+    ],
+    titles: [
+      'Бунгало',
+      'Квартира',
+      'Дом',
+      'Дворец',
+    ],
+  },
   FEATURES: [
     'wifi',
     'dishwasher',
@@ -14,4 +22,5 @@ export default {
     'elevator',
     'conditioner',
   ],
+  MIN_PRICES: [1000, 5000, 10000],
 }

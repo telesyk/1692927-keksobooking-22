@@ -25,10 +25,11 @@ const PHOTOS = [
 const advertsData = {
   TITLES,
   DESCRIPTIONS,
-  TYPES: preferencesAdvertForm.TYPES,
+  TYPES: preferencesAdvertForm.TYPES.values,
   TIMES: preferencesAdvertForm.TIMES,
   FEATURES: preferencesAdvertForm.FEATURES,
   PHOTOS,
+  ADVERTS_QUANTITY: 10,
 };
 
 export default advertsData;

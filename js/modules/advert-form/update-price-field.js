@@ -1,20 +1,21 @@
 import preferencesAdvertForm from '../../constants/preferences-advert-form.js';
+const { TYPES, MIN_PRICES } = preferencesAdvertForm;
 
 export default function updatePriceField(form, typeValue) {
   const priceInput = form.querySelector('#price');
   let updatedPrice = 0;
 
   switch (typeValue) {
-    case preferencesAdvertForm.TYPES[1]:
-      updatedPrice = 1000;
+    case TYPES.values[1]:
+      updatedPrice = MIN_PRICES[0];
       break;
   
-    case preferencesAdvertForm.TYPES[2]:
-      updatedPrice = 5000;
+    case TYPES.values[2]:
+      updatedPrice = MIN_PRICES[1];
       break;
   
-    case preferencesAdvertForm.TYPES[3]:
-      updatedPrice = 10000;
+    case TYPES.values[3]:
+      updatedPrice = MIN_PRICES[2];
       break;
   
     default:

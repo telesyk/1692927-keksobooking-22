@@ -4,17 +4,17 @@ const { TYPES } = preferencesAdvertForm;
 
 export default function setProperType(type) {
   switch(type) {
-    case TYPES[0]:
-      type = 'Бунгало';
+    case TYPES.values[0]:
+      type = TYPES.titles[0];
       break;
-    case TYPES[1]:
-      type = 'Квартира';
+    case TYPES.values[1]:
+      type = TYPES.titles[1];
       break;
-    case TYPES[2]:
-      type = 'Дом';
+    case TYPES.values[2]:
+      type = TYPES.titles[2];
       break;
-    case TYPES[3]:
-      type = 'Дворец';
+    case TYPES.values[3]:
+      type = TYPES.titles[3];
       break;
     default:
       type;
