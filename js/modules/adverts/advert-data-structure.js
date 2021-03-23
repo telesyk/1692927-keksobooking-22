@@ -15,13 +15,13 @@ const createStringList = function(incomeArray) {
 };
 
 
-const createSingleAdvert = function(data) {
+const advertDataStructure = function(data) {
   const { TITLES, DESCRIPTIONS, TYPES, TIMES, FEATURES, PHOTOS } = data;
 
   const avatar = `img/avatars/user0${utils.randomInteger(1, 8)}.png`;
   const title = TITLES[utils.randomInteger(0, TITLES.length - 1)];
   const description = DESCRIPTIONS[utils.randomInteger(0, DESCRIPTIONS.length - 1)];
-  const price = utils.randomInteger(500, 3500);
+  const price = utils.randomInteger(500, 100000);
   const type = TYPES[utils.randomInteger(0, TYPES.length - 1)];
   const rooms = utils.randomInteger(1, 5);
   const guests = utils.randomInteger(1, 15);
@@ -57,4 +57,4 @@ const createSingleAdvert = function(data) {
   };
 };
 
-export default createSingleAdvert;
+export default advertDataStructure;

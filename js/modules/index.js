@@ -1,9 +1,6 @@
 // import adverts from './adverts.js';
 import adverts from './adverts/index.js';
+import card from './card/index.js';
+import advertForm from './advert-form/index.js';
 
-function testModules() {
-  return 'index modules';
-}
-
-
-export default { testModules, adverts };
+export default { advertForm, card, adverts };

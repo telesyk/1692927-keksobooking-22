@@ -1,12 +1,20 @@
-import createSingleAdvert from './create-single-advert.js';
-import createAdverts from './create-adverts.js';
+import advertDataStructure from './advert-data-structure.js';
+import advertsData from './adverts-data.js';
 
-// console.debug('index adverts');
-function testAdverts() {
-  return 'index adverts';
-}
-function testAdverts2() {
-  return 'index adverts 2';
-}
+const createTestAdvertsData = function() {
+  let adverts = [];
 
-export default { testAdverts, testAdverts2, createAdverts, createSingleAdvert };
+  for (let i = 0; i < advertsData.ADVERTS_QUANTITY; i++) {
+    const advert = advertDataStructure(advertsData);
+
+    adverts.push(advert);
+  }
+
+  return adverts;
+};
+
+export default { 
+  advertsData,
+  advertDataStructure,
+  createTestAdvertsData,
+};
