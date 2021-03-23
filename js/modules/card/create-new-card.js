@@ -20,7 +20,7 @@ export default function createNewCard(template, data) {
   avatarElement.src = author.avatar;
   titleElement.textContent = offer.title;
   addressElement.textContent = offer.address;
-  priceElement.innerHTML = `${offer.price} <span>₽/ночь</span>`;
+  priceElement.textContent = `${offer.price} ₽/ночь`;
   typeElement.textContent = setProperType(offer.type);
   capacityElement.textContent = `${offer.rooms} комнаты для ${offer.guests} гостей`;
   timeElement.textContent = `Заезд после ${offer.checkin}, выезд до ${offer.checkout}`;

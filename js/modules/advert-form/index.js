@@ -1,13 +1,13 @@
 import updatePriceField from './update-price-field.js';
 import updateTimeFields from './update-time-fields.js';
 
-export default function advertForm(form) {
-  const handleChange = function(event) {
+export default function advertForm(formElement) {
+  const onFormElementChange = function(event) {
     const target = event.target;
 
     switch (target.id) {
       case 'type':
-        updatePriceField(form, target.value);
+        updatePriceField(formElement, target.value);
         break;
         
       case 'timein':
@@ -17,13 +17,10 @@ export default function advertForm(form) {
       case 'timeout':
         updateTimeFields(target.id);
         break;
-    
-      default:
-        break;
     }
   };
 
-  form.addEventListener('change', handleChange);
+  formElement.addEventListener('change', onFormElementChange);
 
-  return form;
+  return formElement;
 }

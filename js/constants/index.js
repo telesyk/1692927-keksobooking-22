@@ -1,5 +1,3 @@
-import preferencesAdvertForm from '../../constants/preferences-advert-form.js';
-
 const TITLES = [
   'Two-Bedroom Apartment With Terrace',
   'Perfectly Located 1 Br Apartment',
@@ -22,14 +20,70 @@ const PHOTOS = [
   'http://o0.github.io/assets/images/tokyo/hotel3.jpg',
 ];
 
-const advertsData = {
-  TITLES,
-  DESCRIPTIONS,
-  TYPES: preferencesAdvertForm.TYPES.values,
-  TIMES: preferencesAdvertForm.TIMES,
-  FEATURES: preferencesAdvertForm.FEATURES,
-  PHOTOS,
-  ADVERTS_QUANTITY: 10,
+const TIMES = ['12:00', '13:00', '14:00'];
+
+const TYPES = { 
+  bungalow: 'Бунгало',
+  flat: 'Квартира',
+  house: 'Дом',
+  palace: 'Дворец',
 };
 
-export default advertsData;
+const FEATURES = [
+  'wifi',
+  'dishwasher',
+  'parking',
+  'washer',
+  'elevator',
+  'conditioner',
+];
+
+const MIN_PRICES = { 
+  flat: 1000, 
+  house: 5000, 
+  palace: 10000,
+};
+
+const PRICE = {
+  min: 0,
+  max: 1000000,
+};
+
+const ROOMS = {
+  min: 1,
+  max: 5,
+};
+
+const GUESTS = {
+  min: 1,
+  max: 15,
+};
+
+const LOCATION = {
+  latitude: {
+    start: 35.65000,
+    end: 35.70000,
+  },
+  longitude: {
+    start: 139.70000,
+    end: 139.80000,
+  },
+  precision: 5,
+};
+
+const ADVERTS_QUANTITY = 10;
+
+export default {
+  TITLES,
+  DESCRIPTIONS,
+  TYPES,
+  TIMES,
+  FEATURES,
+  PHOTOS,
+  ADVERTS_QUANTITY,
+  MIN_PRICES,
+  PRICE,
+  ROOMS,
+  GUESTS,
+  LOCATION,
+}

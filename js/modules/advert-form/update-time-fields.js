@@ -1,18 +1,19 @@
-export default function updateTimeFields(timeFieldId) {
-  const firstField = document.querySelector(`#${timeFieldId}`);
-  const siblings = firstField.parentNode.children;
+export default function updateTimeFields(timeElementId) {
+  const currentTimeElement = document.querySelector(`#${timeElementId}`);
+  const siblings = currentTimeElement.parentNode.children;
 
-  const getSecondField = function() {
-    for (const node of siblings) {
-      if (node.tagName === 'SELECT' && node.id !== firstField.id) {
-        return node;
+  const getSiblingTimeElement = function() {
+    for (const siblingElement of siblings) {
+      if (siblingElement.tagName === currentTimeElement.tagName
+          && siblingElement.id !== currentTimeElement.id) {
+        return siblingElement;
       }
     }
   };
   
-  const secondField = getSecondField();
+  const siblingTimeElement = getSiblingTimeElement();
 
-  secondField.value = firstField.value;
+  siblingTimeElement.value = currentTimeElement.value;
 
-  return secondField;
+  return siblingTimeElement;
 }
