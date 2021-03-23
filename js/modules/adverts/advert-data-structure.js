@@ -16,21 +16,34 @@ const createStringList = function(incomeArray) {
 
 
 const advertDataStructure = function(data) {
-  const { TITLES, DESCRIPTIONS, TYPES, TIMES, FEATURES, PHOTOS } = data;
+  const { 
+    TITLES,
+    DESCRIPTIONS,
+    TYPES,
+    TIMES,
+    FEATURES,
+    PHOTOS,
+    PRICE,
+    ROOMS,
+    GUESTS,
+    LOCATION
+  } = data;
+
+  const TYPES_KEYS = Object.keys(TYPES);
 
   const avatar = `img/avatars/user0${utils.randomInteger(1, 8)}.png`;
   const title = TITLES[utils.randomInteger(0, TITLES.length - 1)];
   const description = DESCRIPTIONS[utils.randomInteger(0, DESCRIPTIONS.length - 1)];
-  const price = utils.randomInteger(500, 100000);
-  const type = TYPES[utils.randomInteger(0, TYPES.length - 1)];
-  const rooms = utils.randomInteger(1, 5);
-  const guests = utils.randomInteger(1, 15);
+  const price = utils.randomInteger(PRICE.min, PRICE.max);
+  const type = TYPES_KEYS[utils.randomInteger(0, TYPES_KEYS.length - 1)];
+  const rooms = utils.randomInteger(ROOMS.min, ROOMS.max);
+  const guests = utils.randomInteger(GUESTS.min, GUESTS.max);
   const checkin = TIMES[utils.randomInteger(0, TIMES.length - 1)];
   const checkout = TIMES[utils.randomInteger(0, TIMES.length - 1)];
   const features = createStringList(FEATURES);
   const photos = createStringList(PHOTOS);
-  const latitude = utils.randomFloat(35.65000, 35.70000, 5);
-  const longitude = utils.randomFloat(139.70000, 139.80000, 5);
+  const latitude = utils.randomFloat(LOCATION.latitude.start, LOCATION.latitude.end, LOCATION.precision);
+  const longitude = utils.randomFloat(LOCATION.longitude.start, LOCATION.longitude.end, LOCATION.precision);
   const address = `Address ${latitude}, ${longitude}`;
 
   return {

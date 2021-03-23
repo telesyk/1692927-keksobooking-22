@@ -1,11 +1,11 @@
-export default function setPhotos(photoBlock, offerPhotos) {
-  const clonePhoto = photoBlock.querySelector('.popup__photo');
-  photoBlock.removeChild(photoBlock.children[0]);
+export default function setPhotos(photoBlockElement, offerPhotos) {
+  const clonePhotoElement = photoBlockElement.querySelector('.popup__photo');
+  photoBlockElement.removeChild(photoBlockElement.children[0]);
 
   offerPhotos.forEach(url => {
-    let newPhoto = clonePhoto.cloneNode();
-    newPhoto.src = url;
+    let newPhotoNode = clonePhotoElement.cloneNode();
+    newPhotoNode.src = url;
 
-    photoBlock.appendChild( newPhoto );
+    photoBlockElement.appendChild( newPhotoNode );
   });
 }

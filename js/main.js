@@ -6,11 +6,9 @@ const {
   advertForm,
 } = modules;
 
-/* For module 5 task 1 */
-const testAdvertData = adverts.advertDataStructure(adverts.advertsData);
-const mapCanvas = document.querySelector('#map-canvas');
-mapCanvas.appendChild( card(testAdvertData) );
+const testAdvertData = adverts.advertDataStructure(adverts.data);
+const mapCanvasElement = document.querySelector('#map-canvas');
+mapCanvasElement.appendChild( card(testAdvertData) );
 
-/* Form module 5 task 2 */
-const form = document.querySelector('.ad-form');
-advertForm(form);
+const formElement = document.querySelector('.ad-form');
+advertForm(formElement);

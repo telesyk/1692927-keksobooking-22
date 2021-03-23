@@ -1,24 +1,11 @@
-import preferencesAdvertForm from '../../constants/preferences-advert-form.js';
+import preferencesAdvertForm from '../../constants/index.js';
 
-const { TYPES } = preferencesAdvertForm;
+const TYPES = Object.entries(preferencesAdvertForm.TYPES);
 
-export default function setProperType(type) {
-  switch(type) {
-    case TYPES.values[0]:
-      type = TYPES.titles[0];
-      break;
-    case TYPES.values[1]:
-      type = TYPES.titles[1];
-      break;
-    case TYPES.values[2]:
-      type = TYPES.titles[2];
-      break;
-    case TYPES.values[3]:
-      type = TYPES.titles[3];
-      break;
-    default:
-      type;
+export default function setProperType(option) {
+  for (const [type, properType] of TYPES ) {
+    if (option === type) {
+      return properType;
+    }
   }
-
-  return type;
 }

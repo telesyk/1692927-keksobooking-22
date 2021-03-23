@@ -1,14 +1,14 @@
-export default function setFeatures(block, features) {
+export default function setFeatures(blockElement, features) {
   const className = 'popup__feature';
-  const featuresList = block.children;
+  const featuresList = blockElement.children;
   const newClassNames = features.map(item => `${className}--${item}`);
 
   for (const feature of featuresList) {
-    let unicClass = null;
-    for (const classListItem of feature.classList) {
-      if (classListItem !== className) unicClass = classListItem;
-    }
-    const isAvailable = newClassNames.includes(unicClass);
-    if (!isAvailable) feature.classList.add('hidden');
+    feature.classList.add('hidden');
+  }
+
+  for (const key in newClassNames) {
+    const featureElement = blockElement.querySelector(`.${newClassNames[key]}`);
+    featureElement.classList.remove('hidden');
   }
 }
