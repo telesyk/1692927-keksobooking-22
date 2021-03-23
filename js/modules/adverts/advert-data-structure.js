@@ -26,7 +26,7 @@ const advertDataStructure = function(data) {
     PRICE,
     ROOMS,
     GUESTS,
-    LOCATION
+    LOCATION,
   } = data;
 
   const TYPES_KEYS = Object.keys(TYPES);
