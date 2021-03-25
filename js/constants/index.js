@@ -1,3 +1,5 @@
+const INITIALIZED = false;
+
 const TITLES = [
   'Two-Bedroom Apartment With Terrace',
   'Perfectly Located 1 Br Apartment',
@@ -73,7 +75,19 @@ const LOCATION = {
 
 const ADVERTS_QUANTITY = 10;
 
-export default {
+const MAP_INIT = {
+  latitude: 35.6864,
+  longitude: 139.7650,
+  zoom: 13,
+  icon: {
+    width: 52,
+    height: 52,
+    url: '/img/main-pin.svg',
+  }
+};
+
+export {
+  INITIALIZED,
   TITLES,
   DESCRIPTIONS,
   TYPES,
@@ -86,4 +100,5 @@ export default {
   ROOMS,
   GUESTS,
   LOCATION,
+  MAP_INIT,
 }

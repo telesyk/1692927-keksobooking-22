@@ -1,6 +1,4 @@
-import preferencesAdvertForm from '../../constants/index.js';
-
-const TYPES = Object.entries(preferencesAdvertForm.TYPES);
+import { TYPES } from '../../constants/index.js';
 
 export default function setProperType(option) {
   for (const [type, properType] of TYPES ) {
