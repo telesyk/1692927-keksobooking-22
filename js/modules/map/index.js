@@ -12,22 +12,23 @@ const mapInitialization = function(params) {
     zoom: initConf.zoom,
   };
   
+  /* eslint-disable-next-line */
   const mainPinIcon = L.icon({
     iconUrl: initConf.icon.url,
     iconSize: [initConf.icon.width, initConf.icon.height],
     iconAnchor: [(initConf.icon.width / 2), initConf.icon.height],
   });
   
+  /* eslint-disable-next-line */
   const mainPinMarker = L.marker({
-      lat: initPos.lat, 
-      lng: initPos.lng,
-    },
-    {
-      icon: mainPinIcon,
-      draggable: true,
-    },
-  );
+    lat: initPos.lat, 
+    lng: initPos.lng,
+  }, {
+    icon: mainPinIcon,
+    draggable: true,
+  });
 
+  /* eslint-disable-next-line */
   const map = L.map('map-canvas')
     .on('load', () => {
       initialView(mapState);
@@ -37,6 +38,7 @@ const mapInitialization = function(params) {
       lng: initPos.lng,
     }, initPos.zoom);
 
+  /* eslint-disable-next-line */
   L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     { attribution: attributionContent },
@@ -50,11 +52,13 @@ const mapInitialization = function(params) {
     });
 
   advertsList.forEach(advert => {
+    /* eslint-disable-next-line */
     const advertIcon = L.icon({
       iconUrl: initConf.customIcon.url,
       iconSize: [initConf.customIcon.width, initConf.customIcon.height],
       iconAnchor: [(initConf.customIcon.width / 2), initConf.customIcon.height],
     });
+    /* eslint-disable-next-line */
     const marker = L.marker({
       lat: advert.location.x,
       lng: advert.location.y,

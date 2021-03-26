@@ -105,5 +105,5 @@ export {
   ROOMS,
   GUESTS,
   LOCATION,
-  MAP_INIT,
+  MAP_INIT
 }
