@@ -14,7 +14,6 @@ const createTestAdvertsData = function() {
 };
 
 export default {
-  data,
   advertDataStructure,
   createTestAdvertsData,
 };

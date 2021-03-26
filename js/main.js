@@ -2,10 +2,18 @@ import { INITIALIZED, MAP_INIT } from './constants/index.js';
 import modules from './modules/index.js';
 
 const formElement = document.querySelector('.ad-form');
-let mapState = !INITIALIZED;
+const advertsList = modules.adverts.createTestAdvertsData();
+const advertCardElement = modules.card;
+// console.debug(advertsList);
+const mapParams = {
+  mapState: !INITIALIZED,
+  initConf: MAP_INIT,
+  advertsList,
+  advertCardElement,
+};
 
 modules.initialView(INITIALIZED);
-modules.mapInitialization({ mapState, MAP_INIT })
+modules.mapInitialization(mapParams);
 modules.advertForm.form(formElement);
-modules.advertForm.updateLocationField(formElement, MAP_INIT);
+modules.advertForm.updateLocationField(MAP_INIT);
 

@@ -1,6 +1,6 @@
-export default function updateLocationField(formElement, coords) {
+export default function updateLocationField(coords) {
   const { latitude, longitude } = coords;
-  const addressElement = formElement.querySelector('input[name="address"]');
+  const addressElement = document.querySelector('input[name="address"]');
 
   addressElement.value = `${latitude}, ${longitude}`;
 

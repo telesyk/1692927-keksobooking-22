@@ -83,7 +83,12 @@ const MAP_INIT = {
     width: 52,
     height: 52,
     url: '/img/main-pin.svg',
-  }
+  },
+  customIcon: {
+    width: 40,
+    height: 40,
+    url: '/img/pin.svg',
+  },
 };
 
 export {
