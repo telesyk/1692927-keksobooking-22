@@ -1,26 +1,8 @@
-import updatePriceField from './update-price-field.js';
-import updateTimeFields from './update-time-fields.js';
+import form from './form.js';
+import updateLocationField from './update-location-field.js';
 
-export default function advertForm(formElement) {
-  const onFormElementChange = function(event) {
-    const target = event.target;
 
-    switch (target.id) {
-      case 'type':
-        updatePriceField(formElement, target.value);
-        break;
-        
-      case 'timein':
-        updateTimeFields(target.id);
-        break;
-        
-      case 'timeout':
-        updateTimeFields(target.id);
-        break;
-    }
-  };
-
-  formElement.addEventListener('change', onFormElementChange);
-
-  return formElement;
-}
+export default {
+  form,
+  updateLocationField,
+};

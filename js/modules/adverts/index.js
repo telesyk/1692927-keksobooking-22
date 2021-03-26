@@ -1,5 +1,5 @@
 import advertDataStructure from './advert-data-structure.js';
-import data from '../../constants/index.js';
+import * as data from '../../constants/index.js';
 
 const createTestAdvertsData = function() {
   let adverts = [];
@@ -14,7 +14,6 @@ const createTestAdvertsData = function() {
 };
 
 export default {
-  data,
   advertDataStructure,
   createTestAdvertsData,
 };

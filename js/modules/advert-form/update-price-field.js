@@ -1,5 +1,4 @@
-import preferencesAdvertForm from '../../constants/index.js';
-const { MIN_PRICES } = preferencesAdvertForm;
+import { MIN_PRICES } from '../../constants/index.js';
 
 export default function updatePriceField(formElement, typeValue) {
   const priceInputElement = formElement.querySelector('#price');
